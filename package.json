@@ -1,0 +1,32 @@
+{
+  "name": "intrographql",
+  "version": "1.0.0",
+  "description": "follow along with Pluralsight's Building a GraphQL API with Apollo Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathews225/IntroGraphQL.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "Apolo",
+    "API"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathews225/IntroGraphQL/issues"
+  },
+  "homepage": "https://github.com/mathews225/IntroGraphQL#readme",
+  "dependencies": {
+    "apollo-server": "^2.23.0",
+    "apollo-datasource": "^0.8.0",
+    "apollo-datasource-rest": "^0.12.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.7"
+  }
+}
