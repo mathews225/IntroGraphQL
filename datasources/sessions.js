@@ -1,7 +1,7 @@
 const sessions = require('../data/sessions.json');
 const { DataSource } = require('apollo-datasource');
 const _ = require('lodash');
-const { parseInt } = require('lodash');
+//const { parseInt } = require('lodash');
 
 class SessionAPI extends DataSource {
     constructor() {
@@ -28,7 +28,6 @@ class SessionAPI extends DataSource {
     addSession(session) {
         session.id = 12;
         sessions.push(session);
-        //    console.log(session);
         return session
     }
 }
