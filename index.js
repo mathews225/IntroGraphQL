@@ -39,6 +39,7 @@ type Session {
   format:  String
   track: String @deprecated(reason: "Too many sessions do not fit into a single track, we will be migrating to a tags based system in the future...")
   level: String
+  speakers: [Speaker]
 }`
 const resolvers = {
   Query: {
@@ -54,10 +55,10 @@ const resolvers = {
       return dataSources.sessionAPI.getSessionById(id);
     }
     , speakers: (parent, args, { dataSources }, info) => {
-      return dataSources.sessionAPI.getSpeakers();
+      return dataSources.speakerAPI.getSpeakers();
     }
     , speakerById: (parent, { id }, { dataSources }, info) => {
-      return dataSources.sessionAPI.getSpeakers(id);
+      return dataSources.speakerAPI.getSpeakers(id);
     }
   }
 };

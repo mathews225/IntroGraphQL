@@ -4,14 +4,5 @@ const Session = require('./resolvers/sessions');
 
 module.exports = {
   Query
-  , Session: {
-    async speakers(session, args, { dataSources }, info) {
-      //try {
-      const speakers = await dataSources.speakerAPI.getSpeakers();
-      const returns = speakers.filter((speaker) => {
-        return _.filter(session.speakers, { id: speaker.id }).length > 0;
-      });
-      return returns;
-    }
-  }
+  , Session
 }

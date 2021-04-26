@@ -13,6 +13,7 @@ module.exports = gql`
       format: String
       track: String
       level: String
+      speakers: [Speaker]
     ): [Session]
     sessionById(id: ID): Session
     speakers: [Speaker]
