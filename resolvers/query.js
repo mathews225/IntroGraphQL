@@ -6,8 +6,12 @@ module.exports = {
         return allSessions;
     },
     sessionById: (parent, { id }, { dataSources }, info) => {
-        const allSessions = dataSources.sessionAPI.getSessionById(id);
-        return allSessions;
+        try {
+            const sessions = dataSources.sessionAPI.getSessionById(id);
+            return sessions;
+        } catch (error) {
+            return { code: 'ERROR', message: 'An error occured', token: 'Logging Error Token Goes Here' }
+        }
     },
     speakers: (parent, args, { dataSources }, info) => {
         const allSpeakers = dataSources.speakerAPI.getSpeakers();
