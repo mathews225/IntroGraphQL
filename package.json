@@ -28,5 +28,12 @@
     "apollo-datasource-rest": "^0.12.0",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.7"
+  },
+  "notes": {
+    "nodemonConfig": {
+      "env": {
+        "MODE_ENV": "production"
+      }
+    }
   }
-}
+} 
