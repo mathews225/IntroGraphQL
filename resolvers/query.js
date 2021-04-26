@@ -10,7 +10,7 @@ module.exports = {
         return allSessions;
     },
     speakers: (parent, args, { dataSources }, info) => {
-        const allSpeakers = dataSources.speakerAPI.getSpeakers(args);
+        const allSpeakers = dataSources.speakerAPI.getSpeakers();
         return allSpeakers;
     },
     speakerById: (parent, { id }, { dataSources }, info) => {
